@@ -1,4 +1,3 @@
-
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
 import matplotlib.pyplot as plt
@@ -9,6 +8,8 @@ df = pd.read_excel(file_path, usecols=['Como você se identifica em relação à
                                        'Qual(is) dos tipos de discriminação você acha que são mais recorrentes dentro da área de desenvolvimento de software?'])
 
 df.columns = ['sexualidade', 'discriminacao']
+
+df = df.dropna(subset=['sexualidade'])
 
 df['discriminacao'] = df['discriminacao'].fillna('')
 
