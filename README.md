@@ -17,6 +17,11 @@ Welcome to the repository for the research paper "Inclusion and diversity in Sof
 - Raw Data: Available in /data/raw. This includes all the original survey responses.
 - Processed Data: Available in /data/processed. This includes cleaned and formatted data used for analysis.
 
+### Scripts
+
+For the best use of the scripts found on this repository, you should have Python 3.x and this following libraries: pandas, numpy, matplotlib and seaborn.
+We advise you to grab a data sample to compile your code at /data.
+
 ### Survey
 
 The survey questionnaire used in this study is available in the /survey directory.
