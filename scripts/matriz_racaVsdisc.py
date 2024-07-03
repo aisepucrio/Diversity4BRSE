@@ -10,6 +10,8 @@ df = pd.read_excel(file_path, usecols=['Como você se autodeclara?',
 
 df.columns = ['raca', 'discriminacao']
 
+df = df.dropna(subset=['raca'])
+
 df['discriminacao'] = df['discriminacao'].fillna('')
 
 df['raca'] = df['raca'].replace({
