@@ -1,1 +1,37 @@
-# Diversity4SE
+# Inclusion and diversity in Software Development Organizations
+
+### Overview
+
+Welcome to the repository for the research paper "Inclusion and diversity in Software Development Organizations". This repository contains all the codes, data, and resources used in the study.
+
+### Repository Structure
+
+- /data: Contains raw and processed data collected from the survey.
+- /scripts: Includes all scripts used for data analysis and visualization.
+- /survey: The survey questionnaire used in the study.
+- /results: Analysis results, including charts, tables, and summaries.
+- /docs: Additional documentation, such as [yet to be discovered ig].
+
+### Data
+
+- Raw Data: Available in /data/raw. This includes all the original survey responses.
+- Processed Data: Available in /data/processed. This includes cleaned and formatted data used for analysis.
+
+### Survey
+
+The survey questionnaire used in this study is available in the /survey directory.
+
+### Results
+
+The results of the analysis, including all visualizations and summary tables, are available in the /results directory. These are organized by the specific research questions addressed in the study.
+
+### Contributing
+
+We welcome contributions from the community. If you have any suggestions or improvements, please submit a pull request or open an issue.
+
+### Contact
+
+For any questions or further information, please contact:
+
+- Júlia Tadeu (julia.tadeu.azevedo@gmail.com)
+- Theo Canuto (canutoeotheo@gmail.com)
