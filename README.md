@@ -27,7 +27,7 @@ The results of the analysis, including all visualizations and summary tables, ar
 
 ### Contributing
 
-We welcome contributions from the community. If you have any suggestions or improvements, please submit a pull request or open an issue.
+We welcome contributions from the community. If you have any suggestions or improvements, please submit a pull request or open an issue. We also value your input! Please participate in our survey to help us gather valuable data for our research at /survey.
 
 ### Contact
 
