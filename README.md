@@ -10,7 +10,6 @@ Welcome to the repository for the research paper "Inclusion and diversity in Sof
 - /scripts: Includes all scripts used for data analysis and visualization.
 - /survey: The survey questionnaire used in the study.
 - /results: Analysis results, including charts, tables, and summaries.
-- /docs: Additional documentation, such as [yet to be discovered ig].
 
 ### Data
 
