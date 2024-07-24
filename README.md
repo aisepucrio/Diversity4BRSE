@@ -14,13 +14,12 @@ Welcome to the repository for the research paper "Inclusion and diversity in Sof
 
 ### Data
 
-- Raw Data: Available in /data/raw. This includes all the original survey responses.
-- Processed Data: Available in /data/processed. This includes cleaned and formatted data used for analysis.
+This includes all the original survey responses and the coding for the discursive answers.
 
 ### Scripts
 
 For the best use of the scripts found on this repository, you should have Python 3.x and this following libraries: pandas, numpy, matplotlib and seaborn.
-We advise you to grab a data sample to compile your code at /data.
+We advise you to grab the data sample to compile your code at /data.
 
 ### Survey
 
@@ -36,7 +35,13 @@ We welcome contributions from the community. If you have any suggestions or impr
 
 ### Contact
 
-For any questions or further information, please contact:
+For any questions or further information, please contact the responsible researchers:
 
-- Júlia Tadeu (julia.tadeu.azevedo@gmail.com)
-- Theo Canuto (canutoeotheo@gmail.com)
+- Júlia Tadeu (julia@aise.inf.puc-rio.br)
+- Theo Canuto (theo@aise.inf.puc-rio.br)
+
+Or the responsible advisors:
+
+- Juliana Alves Pereira (juliana@inf.puc-rio.br)
+- Larissa Rocha (larissabastos@uneb.br)
+- Anderson Uchôa (andersonuchoa@ufc.br)
