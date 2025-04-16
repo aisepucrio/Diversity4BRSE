@@ -31,16 +31,3 @@ The results of the analysis, including all visualizations and summary tables, ar
 ### Contributing
 
 We welcome contributions from the community. If you have any suggestions or improvements, please submit a pull request or open an issue. We also value your input! Please participate in our survey to help us gather valuable data for our research at /survey.
-
-### Contact
-
-For any questions or further information, please contact the responsible researchers:
-
-- Júlia Tadeu (julia@aise.inf.puc-rio.br)
-- Theo Canuto (theo@aise.inf.puc-rio.br)
-
-Or the responsible advisors:
-
-- Juliana Alves Pereira (juliana@inf.puc-rio.br)
-- Larissa Rocha (larissabastos@uneb.br)
-- Anderson Uchôa (andersonuchoa@ufc.br)
