@@ -1,8 +1,8 @@
-# Inclusion and diversity in Software Development Organizations
+# Diversity Matters: Perceived Inclusion and Discrimination by Brazilian Tech Professionals
 
 ### Overview
 
-Welcome to the repository for the research paper "Inclusion and diversity in Software Development Organizations". This repository contains all the codes, data, and resources used in the study.
+Welcome to the repository for the research "Diversity Matters: Perceived Inclusion and Discrimination by Brazilian Tech Professionals". This repository contains all the codes, data, and resources used in the study.
 
 ### Repository Structure
 
@@ -10,23 +10,6 @@ Welcome to the repository for the research paper "Inclusion and diversity in Sof
 - /scripts: Includes all scripts used for data analysis and visualization.
 - /survey: The survey questionnaire used in the study.
 - /results: Analysis results, including charts, tables, and summaries.
-
-### Data
-
-This includes all the original survey responses and the coding for the discursive answers.
-
-### Scripts
-
-For the best use of the scripts found on this repository, you should have Python 3.x and this following libraries: pandas, numpy, matplotlib and seaborn.
-We advise you to grab the data sample to compile your code at /data.
-
-### Survey
-
-The survey questionnaire used in this study is available in the /survey directory.
-
-### Results
-
-The results of the analysis, including all visualizations and summary tables, are available in the /results directory. These are organized by the specific research questions addressed in the study.
 
 ### Contributing
 
