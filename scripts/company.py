@@ -8,7 +8,7 @@ def split_discriminacoes(texto):
         return []
     return re.split(r',\s(?=\w+\s?\()', texto)
 
-df = pd.read_csv("analise_i&d_up.csv")
+df = pd.read_csv("analysis_i&d_up.csv")
 
 col_model = "Qual seu modelo de trabalho?"
 col_setor = "Qual o setor da organização para qual você trabalha atualmente?"

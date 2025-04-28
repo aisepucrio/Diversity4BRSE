@@ -8,7 +8,7 @@ def split_disc(texto):
         return []
     return re.split(r',\s(?=\w+\s?\()', texto)
 
-df = pd.read_csv("analise_i&d_up.csv")
+df = pd.read_csv("analysis_i&d_up.csv")
 
 col_seniority = "Por favor indique a senioridade do posição que ocupa.  "
 col_race = "Como voce se autodeclara?"
