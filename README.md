@@ -8,7 +8,7 @@ Welcome to the repository for the research "Diversity Matters: Perceived Inclusi
 
 - /data: Contains raw and processed data collected from the survey.
 - /scripts: Includes all scripts used for data analysis and visualization.
-- /survey: The survey questionnaire used in the study.
+- /survey: The survey questionnaire used in the study and the ICF. Available versions: Portuguese and English.
 - /results: Analysis results, including charts, tables, and summaries.
 
 ### Contributing
