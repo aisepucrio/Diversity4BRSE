@@ -32,14 +32,12 @@ data = {
     }
 }
 
-# Flatten data into a DataFrame
 rows = []
 for category, subs in data.items():
     for subcat, qty in subs.items():
         rows.append({'Category': category, 'Subcategory': subcat, 'Quantity': qty})
 df = pd.DataFrame(rows)
 
-# Assign a unique color to each of the 5 main categories
 colors = {
     'Uncertainty': '#1f77b4',
     'Denial':        '#ff7f0e',
@@ -51,21 +49,16 @@ df['Color'] = df['Category'].map(colors)
 
 fig, ax = plt.subplots(figsize=(4, 10))
 
-# 1) Plota barras horizontais: Subcategory no eixo y, Quantity no eixo x
 ax.barh(df['Subcategory'], df['Quantity'], color=df['Color'])
 
-# 2) Remove margem extra em y
 ax.margins(y=0.01)
 
-# 3) Rótulos trocados de lugar
 ax.set_ylabel('Subcategories', fontsize=14)
 ax.set_xlabel('Quantity',     fontsize=14)
 
-# 4) Ticks com fonte personalizada
 ax.tick_params(axis='x', labelsize=12)
 ax.tick_params(axis='y', labelsize=12)
 
-# 5) Legenda dentro do gráfico
 legend_handles = [
     plt.Line2D([0], [0], marker='s', color=col, linestyle='')
     for col in colors.values()

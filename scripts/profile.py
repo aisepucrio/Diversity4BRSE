@@ -3,62 +3,54 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import re
 
-def split_discriminacoes(texto):
+def split_disc(texto):
     if not isinstance(texto, str):
         return []
     return re.split(r',\s(?=\w+\s?\()', texto)
 
 df = pd.read_csv("analise_i&d_up.csv")
 
-col_senioridade = "Por favor indique a senioridade do posição que ocupa.  "
-col_raca = "Como voce se autodeclara?"
+col_seniority = "Por favor indique a senioridade do posição que ocupa.  "
+col_race = "Como voce se autodeclara?"
 col_pcd = "Você é uma pessoa com deficiência? "
-col_genero = "Como você se identifica em relação à sua identidade de gênero?"
+col_gen = "Como você se identifica em relação à sua identidade de gênero?"
 col_sex = "Como você se identifica em relação à sua orientação sexual?  "
-col_discriminacao = "Qual(is) dos tipos de discriminação você acha que são mais recorrentes dentro da área de desenvolvimento de software?"
+col_disc = "Qual(is) dos tipos de discriminação você acha que são mais recorrentes dentro da área de desenvolvimento de software?"
 
-df = df[[col_genero, col_sex, col_raca, col_pcd, col_senioridade,col_discriminacao]].dropna()
-df[col_discriminacao] = df[col_discriminacao].apply(split_discriminacoes)
-df = df.explode(col_discriminacao)
-df[col_discriminacao] = df[col_discriminacao].str.strip()
+df = df[[col_gen, col_sex, col_race, col_pcd, col_seniority,col_disc]].dropna()
+df[col_disc] = df[col_disc].apply(split_disc)
+df = df.explode(col_disc)
+df[col_disc] = df[col_disc].str.strip()
 
-mapa_genero = {
+gender_map = {
     "homem cisgênero": "Men",
     "homem trans": "Men",
     "mulher cisgênero": "Women",
     "mulher trans": "Women",
-    # "não-binário": "Others G",
-    # "bigênero": "Others G",
-    # "prefiro não responder": "Others G",
-    # "não sei": "Others G",
-    # "outro": "Others G"
 }
 
-def mapear_genero(val):
+def mapping_gender(val):
     if not isinstance(val, str):
         return 
     val = val.strip().lower()
-    return mapa_genero.get(val)
+    return gender_map.get(val)
 
-df["Gênero Agrupado"] = df[col_genero].apply(mapear_genero)
+df["Gender Agg"] = df[col_gen].apply(mapping_gender)
 
-mapa_sexualidade = {
+sexuality_map = {
     "heterossexual": "Heterosexual",
     "homossexual": "LGBTQ+",
     "bissexual": "LGBTQ+",
     "pansexual": "LGBTQ+",
-    # "prefiro não responder": "Others S",
-    # "outro": "Others S",
-    # "não sei": "Others S"
 }
 
-def mapear_sexualidade(val):
+def mapping_sexuality(val):
     if not isinstance(val, str):
         return
     val = val.strip().lower()
-    return mapa_sexualidade.get(val)
+    return sexuality_map.get(val)
 
-df["Sexualidade Agrupada"] = df[col_sex].apply(mapear_sexualidade)
+df["Sexuality Agg"] = df[col_sex].apply(mapping_sexuality)
 
 def mapear_pcd(val):
     if not isinstance(val, str):
@@ -78,8 +70,6 @@ mapa_raca = {
     "branco(a)": "White",
     "pardo(a)": "PoC",
     "indígena": "PoC",
-    # "prefiro não responder": "Others R",
-    # "outro": "Others R"
 }
 
 def mapear_raca(val):
@@ -88,7 +78,7 @@ def mapear_raca(val):
     val = val.strip().lower()
     return mapa_raca.get(val)
 
-df["Raça Agrupada"] = df[col_raca].apply(mapear_raca)
+df["Race Agg"] = df[col_race].apply(mapear_raca)
 
 mapa_senioridade = {
     "estagiário": "Intern",
@@ -103,7 +93,7 @@ def mapear_senioridade(val):
     val = val.strip().lower()
     return mapa_senioridade.get(val)
 
-df["Senioridade Agrupada"] = df[col_senioridade].apply(mapear_senioridade)
+df["Seniority Agg"] = df[col_seniority].apply(mapear_senioridade)
 
 tipos_validos = [
     "Etarismo", "Machismo", "Homofobia",
@@ -119,22 +109,22 @@ tipos_traduzidos = {
     "Capacitismo": "Ableism"
 }
 
-def mapear_discriminacao(val):
+def mapping_disc(val):
     if not isinstance(val, str):
         return
     val = val.strip()
     tipo = val.split("(")[0].strip()
     return tipos_traduzidos.get(tipo)
 
-df["Discriminação Label"] = df[col_discriminacao].apply(mapear_discriminacao)
+df["Disc Label"] = df[col_disc].apply(mapping_disc)
 
-df_genero = df.rename(columns={"Gênero Agrupado": "Perfil"})[["Perfil", "Discriminação Label"]]
-df_pcd = df.rename(columns={"PCD": "Perfil"})[["Perfil", "Discriminação Label"]]
-df_sexualidade = df.rename(columns={"Sexualidade Agrupada": "Perfil"})[["Perfil", "Discriminação Label"]]
-df_raca = df.rename(columns={"Raça Agrupada": "Perfil"})[["Perfil", "Discriminação Label"]]
-df_senioridade = df.rename(columns={"Senioridade Agrupada": "Perfil"})[["Perfil", "Discriminação Label"]]
+df_genero = df.rename(columns={"Gender Agg": "Profile"})[["Profile", "Disc Label"]]
+df_pcd = df.rename(columns={"PCD": "Profile"})[["Profile", "Disc Label"]]
+df_sexualidade = df.rename(columns={"Sexuality Agg": "Profile"})[["Profile", "Disc Label"]]
+df_raca = df.rename(columns={"Race Agg": "Profile"})[["Profile", "Disc Label"]]
+df_senioridade = df.rename(columns={"Seniority Agg": "Profile"})[["Profile", "Disc Label"]]
 df_total = df.copy()
-df_total["Perfil"] = "Total (overall)"
+df_total["Profile"] = "Total (overall)"
 
 df_final = pd.concat([
     df_genero,
@@ -142,57 +132,55 @@ df_final = pd.concat([
     df_raca,
     df_senioridade,
     df_pcd,
-    df_total[["Perfil", "Discriminação Label"]]
+    df_total[["Profile", "Disc Label"]]
 ], ignore_index=True)
 
 df_resp = pd.read_csv("analise_i&d_up.csv")
-df_resp["Gênero Agrupado"] = df_resp[col_genero].apply(mapear_genero)
-df_resp["Sexualidade Agrupada"] = df_resp[col_sex].apply(mapear_sexualidade)
-df_resp["Raça Agrupada"] = df_resp[col_raca].apply(mapear_raca)
-df_resp["Senioridade Agrupada"] = df_resp[col_senioridade].apply(mapear_senioridade)
+df_resp["Gender Agg"] = df_resp[col_gen].apply(mapping_gender)
+df_resp["Sexuality Agg"] = df_resp[col_sex].apply(mapping_sexuality)
+df_resp["Race Agg"] = df_resp[col_race].apply(mapear_raca)
+df_resp["Seniority Agg"] = df_resp[col_seniority].apply(mapear_senioridade)
 df_resp["PCD"] = df_resp[col_pcd].apply(mapear_pcd)
 
-total_por_perfil = {}
-for g in df_resp["Gênero Agrupado"].unique():
-    total_por_perfil[g] = len(df_resp[df_resp["Gênero Agrupado"] == g])
-for s in df_resp["Sexualidade Agrupada"].unique():
-    total_por_perfil[s] = len(df_resp[df_resp["Sexualidade Agrupada"] == s])
-for r in df_resp["Raça Agrupada"].unique():
-    total_por_perfil[r] = len(df_resp[df_resp["Raça Agrupada"] == r])
-for s in df_resp["Senioridade Agrupada"].unique():
-    total_por_perfil[s] = len(df_resp[df_resp["Senioridade Agrupada"] == s])
+total_por_Profile = {}
+for g in df_resp["Gender Agg"].unique():
+    total_por_Profile[g] = len(df_resp[df_resp["Gender Agg"] == g])
+for s in df_resp["Sexuality Agg"].unique():
+    total_por_Profile[s] = len(df_resp[df_resp["Sexuality Agg"] == s])
+for r in df_resp["Race Agg"].unique():
+    total_por_Profile[r] = len(df_resp[df_resp["Race Agg"] == r])
+for s in df_resp["Seniority Agg"].unique():
+    total_por_Profile[s] = len(df_resp[df_resp["Seniority Agg"] == s])
 for d in df_resp["PCD"].unique():
-    total_por_perfil[d] = len(df_resp[df_resp["PCD"] == d])
-total_por_perfil["Total (overall)"] = len(df_resp)
+    total_por_Profile[d] = len(df_resp[df_resp["PCD"] == d])
+total_por_Profile["Total (overall)"] = len(df_resp)
 
-counts = df_final.groupby(["Perfil", "Discriminação Label"]).size().reset_index(name="count")
+counts = df_final.groupby(["Profile", "Disc Label"]).size().reset_index(name="count")
 counts["percent"] = counts.apply(
-    lambda row: (row["count"] / total_por_perfil.get(row["Perfil"], 1)) * 100,
+    lambda row: (row["count"] / total_por_Profile.get(row["Profile"], 1)) * 100,
     axis=1
 )
 
-#ordem_discriminacao = ["Sexism", "Elitism", "Ableism", "Homophobia", "Ageism", "Racism", "Others"]
-#ordem_discriminacao = ["Racism", "Homophobia", "Ageism", "Ableism", "Elitism", "Sexism", "Others"]
-ordem_discriminacao = ["Ableism", "Ageism", "Elitism", "Homophobia", "Racism", "Sexism"]
+disc_order = ["Ableism", "Ageism", "Elitism", "Homophobia", "Racism", "Sexism"]
 heatmap_data = counts.pivot_table(
-    index="Perfil",
-    columns="Discriminação Label",
+    index="Profile",
+    columns="Disc Label",
     values="percent",
     fill_value=0
 )
 
-heatmap_data = heatmap_data[ordem_discriminacao]
+heatmap_data = heatmap_data[disc_order]
 
-ordem_perfis = [
-    "Women", "Men",  # Gênero
-    "Heterosexual", "LGBTQ+",  # Sexualidade
-    "White", "PoC",  # Raça
-    "Intern", "Junior", "Mid-level", "Senior",  # Senioridade
+profile_order = [
+    "Women", "Men",
+    "Heterosexual", "LGBTQ+",
+    "White", "PoC",
+    "Intern", "Junior", "Mid-level", "Senior",
     "Not disabled", "Disabled",
-    "Total (overall)"  # Total geral
+    "Total (overall)"
 ]
 
-heatmap_data = heatmap_data.reindex(ordem_perfis)
+heatmap_data = heatmap_data.reindex(profile_order)
 
 plt.figure(figsize=(4,4))
 sns.heatmap(

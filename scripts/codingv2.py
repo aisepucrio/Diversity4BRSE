@@ -76,9 +76,9 @@ ax.legend(
     legend_handles, 
     colors.keys(), 
     title='Categories of Bias',
-    loc='upper right',       # posiciona no canto interno superior-direito
-    frameon=True,            # desenha a caixinha
-    borderpad=0.5           # espaçamento interno da caixa
+    loc='upper right',
+    frameon=True,
+    borderpad=0.5
 )
 
 plt.xticks(rotation=45, ha='right')
