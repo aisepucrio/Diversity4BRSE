@@ -20,7 +20,7 @@ This study investigates perceived inclusion and discrimination by Brazilian tech
 - 1. Install dependencies
 
     ```bash
-   pip install -r requirements.txt
+   pip install -r scripts/requirements.txt
    ```
 
 - 2. Run the scripts according to what you aim to capture:
