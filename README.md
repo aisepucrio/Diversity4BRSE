@@ -1,8 +1,10 @@
 # Diversity Matters: Perceived Inclusion and Discrimination by Brazilian Tech Professionals
 
-### Overview
+This repository contains all the codes, data, ICFs and resources used in the study.
 
-Welcome to the repository for the research "Diversity Matters: Perceived Inclusion and Discrimination by Brazilian Tech Professionals". Through a survey of 220 participants across Brazil, we examine the challenges faced by underrepresented groups, the strategies companies employ, and the gaps in current practices. This repository contains all the codes, data, and resources used in the study.
+### Abstract
+
+This study investigates perceived inclusion and discrimination by Brazilian tech professionals. Through a survey of 220 participants across Brazil, we examine the challenges faced by underrepresented groups, the strategies companies employ, and the gaps in current practices.
 
 ### Repository Structure
 
