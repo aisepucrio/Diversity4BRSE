@@ -1,6 +1,6 @@
 # Diversity Matters: Perceived Inclusion and Discrimination by Brazilian Tech Professionals
 
-This repository contains all the codes, data, ICFs and resources used in the study.
+This repository contains all the codes, data, ICFs and resources used in the study. [![DOI](https://zenodo.org/badge/823398782.svg)](https://doi.org/10.5281/zenodo.15885217)
 
 Access the full paper [here](results/Diversity4SEBR.pdf)
 
