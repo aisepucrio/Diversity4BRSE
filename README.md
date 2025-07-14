@@ -20,9 +20,9 @@ This study investigates perceived inclusion and discrimination by Brazilian tech
 In order to replicate our data visualizations, you should have:
 
 - [Python 3](https://www.python.org/downloads/release/python-3135/)
-    - Gerenciador de pacotes: [pip] (https://pip.pypa.io/en/stable/installation/)
+    - Gerenciador de pacotes: [pip](https://pip.pypa.io/en/stable/installation/)
 
-- [Git] (https://git-scm.com)
+- [Git](https://git-scm.com)
 
 Then, open your prefered IDLE or your terminal for the next instructions.
 
