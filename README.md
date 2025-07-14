@@ -10,8 +10,8 @@ This study investigates perceived inclusion and discrimination by Brazilian tech
 
 ### Repository Structure
 
-- /data: Contains raw and processed data collected from the survey and a `requirements.txt` file that lists the libraries required to reproduce the project environment.
-- /scripts: Includes all scripts used for data analysis and visualization.
+- /data: Contains raw and processed data collected from the survey.
+- /scripts: Includes all scripts used for data analysis and visualization and a `requirements.txt` file that lists the libraries required to reproduce the project environment.
 - /survey: The survey questionnaire used in the study and the ICF. Available versions: Portuguese and English.
 - /results: Analysis results, including charts, tables, summaries, and full characterization of the 220 survey respondants. Also includes the full paper in pdf version.
 
