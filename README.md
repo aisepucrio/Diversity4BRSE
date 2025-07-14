@@ -23,13 +23,13 @@ This study investigates perceived inclusion and discrimination by Brazilian tech
    pip install -r scripts/requirements.txt
    ```
 
-- 2. Run the scripts according to the analysis you aim to visualize:
+- 2. Run the scripts according to the analysis you aim to visualize on your terminal:
 
-    - `scripts/coding.py`
-    - `scripts/company.py`
-    - `scripts/leadership_roles.py`
-    - `scripts/profile.py`
-    - `scripts/teams.py`
+    - `python scripts/coding.py`
+    - `python scripts/company.py`
+    - `python scripts/leaders.py`
+    - `python scripts/profile.py`
+    - `python scripts/teams.py`
 
 ### Contributing
 

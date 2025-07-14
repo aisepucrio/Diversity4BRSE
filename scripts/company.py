@@ -133,10 +133,6 @@ sns.heatmap(
     cbar_kws={'label': '% of respondents'}
 )
 
-for index, row in heatmap_data_org.iterrows():
-    for column in heatmap_data_org.columns:
-        print(f"Value at ({index}, {column}): {row[column]:.1f}%")     
-
 plt.xticks(rotation=0, ha='center', fontsize=12)
 plt.yticks(rotation=0, fontsize=12)
 plt.tight_layout()

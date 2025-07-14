@@ -193,14 +193,7 @@ sns.heatmap(
     cbar_kws={'label': '% of respondents'}
 )
 
-for index, row in heatmap_data.iterrows():
-    for column in heatmap_data.columns:
-        print(f"Value at ({index}, {column}): {row[column]:.1f}%")   
-
-# plt.xlabel("Type of Discrimination")
-# plt.ylabel("Profile")
 plt.xticks(rotation=0, ha='center', fontsize=12)
 plt.yticks(rotation=0, fontsize=12)
 plt.tight_layout()
-#plt.title("Perception of Discrimination by Gender and Sexuality", fontsize=14, weight='bold')
 plt.show()
