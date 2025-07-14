@@ -17,13 +17,19 @@ This study investigates perceived inclusion and discrimination by Brazilian tech
 
 ### Reproducing the Study
 
-- 1. Install dependencies
+- 1. Clone this repository
+
+    ```bash
+   git clone https://github.com/aisepucrio/Diversity4BRSE.git
+   ```
+
+- 2. Install dependencies
 
     ```bash
    pip install -r scripts/requirements.txt
    ```
 
-- 2. Run the scripts according to the analysis you aim to visualize on your terminal:
+- 3. Run the scripts according to the analysis you aim to visualize on your terminal:
 
     - `python scripts/coding.py`
     - `python scripts/company.py`
