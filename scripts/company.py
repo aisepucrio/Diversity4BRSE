@@ -8,7 +8,7 @@ def split_discriminacoes(texto):
         return []
     return re.split(r',\s(?=\w+\s?\()', texto)
 
-df = pd.read_csv("analysis_i&d_up.csv")
+df = pd.read_csv("data/analysis_i&d_up.csv")
 
 col_model = "Qual seu modelo de trabalho?"
 col_setor = "Qual o setor da organização para qual você trabalha atualmente?"
@@ -84,7 +84,7 @@ df_final_org = pd.concat([
 ], ignore_index=True)
 
 
-df_resp = pd.read_csv("analise_i&d_up.csv")
+df_resp = pd.read_csv("data/analysis_i&d_up.csv")
 total_por_perfil_org = {}
 df_resp[col_model] = df_resp[col_model].str.strip().str.lower().map(mapa_modelo).fillna("Others")
 df_resp[col_setor] = df_resp[col_setor].str.strip().str.lower().map(mapa_setor).fillna("Others")
@@ -122,7 +122,7 @@ ordem_perfis = [
 
 heatmap_data_org = heatmap_data_org.reindex(ordem_perfis)
 
-plt.figure(figsize=(4, 4))
+plt.figure(figsize=(10,7))
 sns.heatmap(
     heatmap_data_org,
     annot=True,

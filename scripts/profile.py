@@ -8,7 +8,7 @@ def split_disc(texto):
         return []
     return re.split(r',\s(?=\w+\s?\()', texto)
 
-df = pd.read_csv("analysis_i&d_up.csv")
+df = pd.read_csv("data/analysis_i&d_up.csv")
 
 col_seniority = "Por favor indique a senioridade do posição que ocupa.  "
 col_race = "Como voce se autodeclara?"
@@ -135,7 +135,7 @@ df_final = pd.concat([
     df_total[["Profile", "Disc Label"]]
 ], ignore_index=True)
 
-df_resp = pd.read_csv("analise_i&d_up.csv")
+df_resp = pd.read_csv("data/analysis_i&d_up.csv")
 df_resp["Gender Agg"] = df_resp[col_gen].apply(mapping_gender)
 df_resp["Sexuality Agg"] = df_resp[col_sex].apply(mapping_sexuality)
 df_resp["Race Agg"] = df_resp[col_race].apply(mapear_raca)
@@ -182,7 +182,7 @@ profile_order = [
 
 heatmap_data = heatmap_data.reindex(profile_order)
 
-plt.figure(figsize=(4,4))
+plt.figure(figsize=(10,7))
 sns.heatmap(
     heatmap_data,
     annot=True,

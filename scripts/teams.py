@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import Patch
 
 # Load the dataset
-df = pd.read_csv('data_teams.csv')
+df = pd.read_csv('data/data_teams.csv')
 
 # Select Likert-scale columns
 likert_cols = ['Race/Ethnicity', 'Gender/Sexuality', 'Neurodivergency', 'Disability', 'Elderly']
@@ -21,7 +21,7 @@ neg = -likert_perc[[1, 2]]
 pos = likert_perc[[3, 4]]
 
 # Plot
-fig, ax = plt.subplots(figsize=(6,3))
+fig, ax = plt.subplots(figsize=(10,7))
 
 colors = {
     1: "#d90000",  # strongly disagree (red)
