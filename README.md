@@ -70,14 +70,11 @@ https://doi.org/10.5281/zenodo.15885218
 
 **BibTeX:**
 ```bibtex
-@misc{sousaDiversity4BRSE,
+@inproceedings{sousaDiversity4BRSE,
   author    = {Sousa, Theo and Azevedo, Júlia and Ribas, Jessica and 
                Uchôa, Anderson and Rocha, Larissa and Alves Pereira, Juliana},
   title     = {Diversity Matters: Perceived Inclusion and Discrimination 
                by Brazilian Tech Professionals},
-  year      = {2025},
-  publisher = {Zenodo},
-  doi       = {10.5281/zenodo.15885218},
-  url       = {https://doi.org/10.5281/zenodo.15885218}
+  year      = {2025}
 }
 ```
