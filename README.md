@@ -63,21 +63,16 @@ If you use this repository or its data, please cite:
 
 **APA Format:**
 ```
-Sousa, T., & Azevedo, J. (2025). Diversity Matters: Perceived Inclusion and 
-Discrimination by Brazilian Tech Professionals. Zenodo. 
-https://doi.org/10.5281/zenodo.15885218
+Sousa, Theo; Azevedo, Júlia; Ribas, Jessica; Uchôa, Anderson; Rocha, Larissa; and Alves Pereira, Juliana. Diversity Matters: Perceived Inclusion and Discrimination by Brazilian Tech Professionals. In Brazilian Symposium on Software Engineering (SBES). September 2025.
 ```
 
 **BibTeX:**
 ```bibtex
-@misc{sousaDiversity4BRSE,
+@inproceedings{sousaDiversity4BRSE,
   author    = {Sousa, Theo and Azevedo, Júlia and Ribas, Jessica and 
                Uchôa, Anderson and Rocha, Larissa and Alves Pereira, Juliana},
   title     = {Diversity Matters: Perceived Inclusion and Discrimination 
                by Brazilian Tech Professionals},
-  year      = {2025},
-  publisher = {Zenodo},
-  doi       = {10.5281/zenodo.15885218},
-  url       = {https://doi.org/10.5281/zenodo.15885218}
+  year      = {2025}
 }
 ```
