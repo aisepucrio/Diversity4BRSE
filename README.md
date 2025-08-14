@@ -69,7 +69,7 @@ Sousa, Theo; Azevedo, Júlia; Ribas, Jessica; Uchôa, Anderson; Rocha, Larissa; 
 **BibTeX:**
 ```bibtex
 @inproceedings{sousaDiversity4BRSE,
-  author    = {Sousa, Theo and Azevedo, Júlia and Ribas, Jessica and 
+  author    = {Canuto, Theo and Azevedo, Júlia and Ribas, Jessica and 
                Uchôa, Anderson and Rocha, Larissa and Alves Pereira, Juliana},
   title     = {Diversity Matters: Perceived Inclusion and Discrimination 
                by Brazilian Tech Professionals},
